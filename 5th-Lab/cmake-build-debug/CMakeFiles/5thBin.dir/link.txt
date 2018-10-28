@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/5thBin.dir/5thBin/5thBin.c.o  -o 5thBin 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/5thPart-3.dir/5thBin/5th-part3.c.o  -o 5thPart-3 

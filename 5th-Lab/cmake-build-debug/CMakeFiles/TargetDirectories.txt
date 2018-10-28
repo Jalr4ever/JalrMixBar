@@ -1,0 +1,8 @@
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/5thPart-3.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/5th_Lab.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/5thBin.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/5thPart-1.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/TestPointer.dir
+/home/jalr/CLionProjects/5th-Lab/cmake-build-debug/CMakeFiles/5thPart-2.dir
