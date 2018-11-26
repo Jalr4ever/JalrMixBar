@@ -1,0 +1,5 @@
+D:/Project/C/OS-6thLab/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Project/C/OS-6thLab/cmake-build-debug/CMakeFiles/OS_6thLab.dir
+D:/Project/C/OS-6thLab/cmake-build-debug/CMakeFiles/CodePt-1.dir
+D:/Project/C/OS-6thLab/cmake-build-debug/CMakeFiles/CodePt-1C1.dir
+D:/Project/C/OS-6thLab/cmake-build-debug/CMakeFiles/edit_cache.dir
