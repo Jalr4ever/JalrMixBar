@@ -110,6 +110,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named 6thTest
+
+# Build rule for target.
+6thTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 6thTest
+.PHONY : 6thTest
+
+# fast build rule for target.
+6thTest/fast:
+	$(MAKE) -f CMakeFiles\6thTest.dir\build.make CMakeFiles/6thTest.dir/build
+.PHONY : 6thTest/fast
+
+#=============================================================================
 # Target rules for targets named OS_6thLab
 
 # Build rule for target.
@@ -136,17 +149,30 @@ CodePt-1/fast:
 .PHONY : CodePt-1/fast
 
 #=============================================================================
-# Target rules for targets named CodePt-1C1
+# Target rules for targets named CodePt-2
 
 # Build rule for target.
-CodePt-1C1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 CodePt-1C1
-.PHONY : CodePt-1C1
+CodePt-2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 CodePt-2
+.PHONY : CodePt-2
 
 # fast build rule for target.
-CodePt-1C1/fast:
-	$(MAKE) -f CMakeFiles\CodePt-1C1.dir\build.make CMakeFiles/CodePt-1C1.dir/build
-.PHONY : CodePt-1C1/fast
+CodePt-2/fast:
+	$(MAKE) -f CMakeFiles\CodePt-2.dir\build.make CMakeFiles/CodePt-2.dir/build
+.PHONY : CodePt-2/fast
+
+#=============================================================================
+# Target rules for targets named CodePt-3
+
+# Build rule for target.
+CodePt-3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 CodePt-3
+.PHONY : CodePt-3
+
+# fast build rule for target.
+CodePt-3/fast:
+	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/build
+.PHONY : CodePt-3/fast
 
 main.obj: main.c.obj
 
@@ -202,32 +228,86 @@ src/6thcodePt1.c.s:
 	$(MAKE) -f CMakeFiles\CodePt-1.dir\build.make CMakeFiles/CodePt-1.dir/src/6thcodePt1.c.s
 .PHONY : src/6thcodePt1.c.s
 
-src/6thcodePt1C1.obj: src/6thcodePt1C1.c.obj
+src/6thcodePt2.obj: src/6thcodePt2.c.obj
 
-.PHONY : src/6thcodePt1C1.obj
+.PHONY : src/6thcodePt2.obj
 
 # target to build an object file
-src/6thcodePt1C1.c.obj:
-	$(MAKE) -f CMakeFiles\CodePt-1C1.dir\build.make CMakeFiles/CodePt-1C1.dir/src/6thcodePt1C1.c.obj
-.PHONY : src/6thcodePt1C1.c.obj
+src/6thcodePt2.c.obj:
+	$(MAKE) -f CMakeFiles\CodePt-2.dir\build.make CMakeFiles/CodePt-2.dir/src/6thcodePt2.c.obj
+.PHONY : src/6thcodePt2.c.obj
 
-src/6thcodePt1C1.i: src/6thcodePt1C1.c.i
+src/6thcodePt2.i: src/6thcodePt2.c.i
 
-.PHONY : src/6thcodePt1C1.i
+.PHONY : src/6thcodePt2.i
 
 # target to preprocess a source file
-src/6thcodePt1C1.c.i:
-	$(MAKE) -f CMakeFiles\CodePt-1C1.dir\build.make CMakeFiles/CodePt-1C1.dir/src/6thcodePt1C1.c.i
-.PHONY : src/6thcodePt1C1.c.i
+src/6thcodePt2.c.i:
+	$(MAKE) -f CMakeFiles\CodePt-2.dir\build.make CMakeFiles/CodePt-2.dir/src/6thcodePt2.c.i
+.PHONY : src/6thcodePt2.c.i
 
-src/6thcodePt1C1.s: src/6thcodePt1C1.c.s
+src/6thcodePt2.s: src/6thcodePt2.c.s
 
-.PHONY : src/6thcodePt1C1.s
+.PHONY : src/6thcodePt2.s
 
 # target to generate assembly for a file
-src/6thcodePt1C1.c.s:
-	$(MAKE) -f CMakeFiles\CodePt-1C1.dir\build.make CMakeFiles/CodePt-1C1.dir/src/6thcodePt1C1.c.s
-.PHONY : src/6thcodePt1C1.c.s
+src/6thcodePt2.c.s:
+	$(MAKE) -f CMakeFiles\CodePt-2.dir\build.make CMakeFiles/CodePt-2.dir/src/6thcodePt2.c.s
+.PHONY : src/6thcodePt2.c.s
+
+src/6thcodePt3.obj: src/6thcodePt3.c.obj
+
+.PHONY : src/6thcodePt3.obj
+
+# target to build an object file
+src/6thcodePt3.c.obj:
+	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/src/6thcodePt3.c.obj
+.PHONY : src/6thcodePt3.c.obj
+
+src/6thcodePt3.i: src/6thcodePt3.c.i
+
+.PHONY : src/6thcodePt3.i
+
+# target to preprocess a source file
+src/6thcodePt3.c.i:
+	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/src/6thcodePt3.c.i
+.PHONY : src/6thcodePt3.c.i
+
+src/6thcodePt3.s: src/6thcodePt3.c.s
+
+.PHONY : src/6thcodePt3.s
+
+# target to generate assembly for a file
+src/6thcodePt3.c.s:
+	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/src/6thcodePt3.c.s
+.PHONY : src/6thcodePt3.c.s
+
+src/test/testFor6th.obj: src/test/testFor6th.c.obj
+
+.PHONY : src/test/testFor6th.obj
+
+# target to build an object file
+src/test/testFor6th.c.obj:
+	$(MAKE) -f CMakeFiles\6thTest.dir\build.make CMakeFiles/6thTest.dir/src/test/testFor6th.c.obj
+.PHONY : src/test/testFor6th.c.obj
+
+src/test/testFor6th.i: src/test/testFor6th.c.i
+
+.PHONY : src/test/testFor6th.i
+
+# target to preprocess a source file
+src/test/testFor6th.c.i:
+	$(MAKE) -f CMakeFiles\6thTest.dir\build.make CMakeFiles/6thTest.dir/src/test/testFor6th.c.i
+.PHONY : src/test/testFor6th.c.i
+
+src/test/testFor6th.s: src/test/testFor6th.c.s
+
+.PHONY : src/test/testFor6th.s
+
+# target to generate assembly for a file
+src/test/testFor6th.c.s:
+	$(MAKE) -f CMakeFiles\6thTest.dir\build.make CMakeFiles/6thTest.dir/src/test/testFor6th.c.s
+.PHONY : src/test/testFor6th.c.s
 
 # Help Target
 help:
@@ -236,9 +316,11 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... rebuild_cache
+	@echo ... 6thTest
 	@echo ... OS_6thLab
 	@echo ... CodePt-1
-	@echo ... CodePt-1C1
+	@echo ... CodePt-2
+	@echo ... CodePt-3
 	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
@@ -246,9 +328,15 @@ help:
 	@echo ... src/6thcodePt1.obj
 	@echo ... src/6thcodePt1.i
 	@echo ... src/6thcodePt1.s
-	@echo ... src/6thcodePt1C1.obj
-	@echo ... src/6thcodePt1C1.i
-	@echo ... src/6thcodePt1C1.s
+	@echo ... src/6thcodePt2.obj
+	@echo ... src/6thcodePt2.i
+	@echo ... src/6thcodePt2.s
+	@echo ... src/6thcodePt3.obj
+	@echo ... src/6thcodePt3.i
+	@echo ... src/6thcodePt3.s
+	@echo ... src/test/testFor6th.obj
+	@echo ... src/test/testFor6th.i
+	@echo ... src/test/testFor6th.s
 .PHONY : help
 
 

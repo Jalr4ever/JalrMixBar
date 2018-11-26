@@ -46,7 +46,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/6thTest.dir/DependInfo.cmake"
   "CMakeFiles/OS_6thLab.dir/DependInfo.cmake"
   "CMakeFiles/CodePt-1.dir/DependInfo.cmake"
-  "CMakeFiles/CodePt-1C1.dir/DependInfo.cmake"
+  "CMakeFiles/CodePt-2.dir/DependInfo.cmake"
+  "CMakeFiles/CodePt-3.dir/DependInfo.cmake"
   )
