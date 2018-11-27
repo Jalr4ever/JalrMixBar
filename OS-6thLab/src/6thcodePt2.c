@@ -70,9 +70,9 @@ void freeMap(BitMap bitMap, int m){
     free(bitMap -> map);           //释放列指针
 }
 
-void travelBitMap(BitMap bitMap,int m, int n){
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
+void travelBitMap(BitMap bitMap,int n, int m){
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
             printf("%d  ", bitMap -> map[i][j]);
         }
         printf("\n");

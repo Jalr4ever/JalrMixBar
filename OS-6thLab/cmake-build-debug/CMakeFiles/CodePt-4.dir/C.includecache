@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Project/C/OS-6thLab/src/test/testFor6th.c
+D:/Project/C/OS-6thLab/src/6thcodePt4.c
 stdio.h
 -
 malloc.h

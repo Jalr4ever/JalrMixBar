@@ -174,6 +174,19 @@ CodePt-3/fast:
 	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/build
 .PHONY : CodePt-3/fast
 
+#=============================================================================
+# Target rules for targets named CodePt-4
+
+# Build rule for target.
+CodePt-4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 CodePt-4
+.PHONY : CodePt-4
+
+# fast build rule for target.
+CodePt-4/fast:
+	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/build
+.PHONY : CodePt-4/fast
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -282,6 +295,33 @@ src/6thcodePt3.c.s:
 	$(MAKE) -f CMakeFiles\CodePt-3.dir\build.make CMakeFiles/CodePt-3.dir/src/6thcodePt3.c.s
 .PHONY : src/6thcodePt3.c.s
 
+src/6thcodePt4.obj: src/6thcodePt4.c.obj
+
+.PHONY : src/6thcodePt4.obj
+
+# target to build an object file
+src/6thcodePt4.c.obj:
+	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/src/6thcodePt4.c.obj
+.PHONY : src/6thcodePt4.c.obj
+
+src/6thcodePt4.i: src/6thcodePt4.c.i
+
+.PHONY : src/6thcodePt4.i
+
+# target to preprocess a source file
+src/6thcodePt4.c.i:
+	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/src/6thcodePt4.c.i
+.PHONY : src/6thcodePt4.c.i
+
+src/6thcodePt4.s: src/6thcodePt4.c.s
+
+.PHONY : src/6thcodePt4.s
+
+# target to generate assembly for a file
+src/6thcodePt4.c.s:
+	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/src/6thcodePt4.c.s
+.PHONY : src/6thcodePt4.c.s
+
 src/test/testFor6th.obj: src/test/testFor6th.c.obj
 
 .PHONY : src/test/testFor6th.obj
@@ -321,6 +361,7 @@ help:
 	@echo ... CodePt-1
 	@echo ... CodePt-2
 	@echo ... CodePt-3
+	@echo ... CodePt-4
 	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
@@ -334,6 +375,9 @@ help:
 	@echo ... src/6thcodePt3.obj
 	@echo ... src/6thcodePt3.i
 	@echo ... src/6thcodePt3.s
+	@echo ... src/6thcodePt4.obj
+	@echo ... src/6thcodePt4.i
+	@echo ... src/6thcodePt4.s
 	@echo ... src/test/testFor6th.obj
 	@echo ... src/test/testFor6th.i
 	@echo ... src/test/testFor6th.s
