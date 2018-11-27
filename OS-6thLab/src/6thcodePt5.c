@@ -198,11 +198,12 @@ void main(){
     travelFile(new_file);
 
     printf("Chose to delete your file or no ? (Y / N )\n");
-    char choice;
-    scanf("%s", &choice);
-    if (choice == 'Y'){
+    char choice[2];
+    scanf("%s", choice);
+    if (choice[0] == 'Y'){
         //todo 删除文件的函数-deletefile()
         //todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！
-        //        deleteFile(m1, n, m, new_file);
+//        printf("Thing going well");
+        deleteFile(m1, n, m, new_file);
     }
 }
