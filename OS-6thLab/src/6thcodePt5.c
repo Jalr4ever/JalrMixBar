@@ -181,6 +181,8 @@ void deleteFile(BitMap bitMap, int n, int m, FCB fcb){
         temp = temp -> next;
     }
 
+    //todo
+
 }
 
 
@@ -201,8 +203,8 @@ void main(){
     char choice[2];
     scanf("%s", choice);
     if (choice[0] == 'Y'){
-        //todo 删除文件的函数-deletefile()
-        //todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！
+        //todo 删除文件的函数-deletefile() - Unfinished
+        //todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！- DONE 2018.11.27 22:05
 //        printf("Thing going well");
         deleteFile(m1, n, m, new_file);
     }
