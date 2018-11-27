@@ -107,7 +107,7 @@ clean: CMakeFiles/6thTest.dir/clean
 CMakeFiles/OS_6thLab.dir/all:
 	$(MAKE) -f CMakeFiles\OS_6thLab.dir\build.make CMakeFiles/OS_6thLab.dir/depend
 	$(MAKE) -f CMakeFiles\OS_6thLab.dir\build.make CMakeFiles/OS_6thLab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C\OS-6thLab\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target OS_6thLab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C\OS-6thLab\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target OS_6thLab"
 .PHONY : CMakeFiles/OS_6thLab.dir/all
 
 # Include target in all.
@@ -282,6 +282,43 @@ CMakeFiles/CodePt-4.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/CodePt-4.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/CodePt-5.dir
+
+# All Build rule for target.
+CMakeFiles/CodePt-5.dir/all:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/depend
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Project\C\OS-6thLab\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target CodePt-5"
+.PHONY : CMakeFiles/CodePt-5.dir/all
+
+# Include target in all.
+all: CMakeFiles/CodePt-5.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CodePt-5.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C\OS-6thLab\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/CodePt-5.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C\OS-6thLab\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/CodePt-5.dir/rule
+
+# Convenience name for target.
+CodePt-5: CMakeFiles/CodePt-5.dir/rule
+
+.PHONY : CodePt-5
+
+# clean rule for target.
+CMakeFiles/CodePt-5.dir/clean:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/clean
+.PHONY : CMakeFiles/CodePt-5.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CodePt-5.dir/clean
 
 .PHONY : clean
 

@@ -17,16 +17,6 @@
 					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="6thTest">
 				<Option output="D:/Project/C/OS-6thLab/cmake-build-debug/6thTest.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
@@ -58,6 +48,16 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 6thTest/fast"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -243,6 +243,42 @@
 					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="CodePt-5">
+				<Option output="D:/Project/C/OS-6thLab/cmake-build-debug/CodePt-5.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 CodePt-5"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CodePt-5/fast">
+				<Option output="D:/Project/C/OS-6thLab/cmake-build-debug/CodePt-5.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 CodePt-5/fast"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Project/C/OS-6thLab/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/Project/C/OS-6thLab/cmake-build-debug"/>
 				<Option type="4"/>
@@ -268,6 +304,9 @@
 		</Unit>
 		<Unit filename="D:/Project/C/OS-6thLab/src/6thcodePt4.c">
 			<Option target="CodePt-4"/>
+		</Unit>
+		<Unit filename="D:/Project/C/OS-6thLab/src/6thcodePt5.c">
+			<Option target="CodePt-5"/>
 		</Unit>
 		<Unit filename="D:/Project/C/OS-6thLab/src/test/testFor6th.c">
 			<Option target="6thTest"/>

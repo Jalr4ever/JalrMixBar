@@ -64,7 +64,7 @@ void updateMap(BitMap bitmap, int n, int m, int b){
     travelBitMap(bitmap, n, m);
 }
 
-void createFile(BitMap bitMap, int n, int m){
+void createFile(BitMap bitMap, int n, int m,  FCB *file_fcb){
 
     int disk_size = n * m * BLOCK_SIZE;
 
@@ -80,9 +80,9 @@ void createFile(BitMap bitMap, int n, int m){
 
     else{ //磁盘有空间
         //1. 初始化该文件的 FCB 目录项，一个 FCB 对应一个文件，这里还初始化文件名
-        FCB file_fcb = (FCB) malloc(sizeof(_FCB));
+        (*file_fcb)= (FCB) malloc(sizeof(_FCB));
         printf("------\nStart to create a new file. Please input file name: \n");
-        scanf("%s", file_fcb->name);
+        scanf("%s", (*file_fcb)->name);
         printf("\nPlease input file size (Size must less than %d bytes): \n", disk_size);
         scanf("%d",&file_size);
         if(file_size <= 0){
@@ -97,9 +97,9 @@ void createFile(BitMap bitMap, int n, int m){
         }
 
         //为文件分配指定数量的盘块，初始化 fcb 第一个盘块的首盘块指针及其指向的地址内容
-        file_fcb -> first_block = (Block_Node) malloc (sizeof(_Block_Node));
-        file_fcb -> first_block -> block_id = avail_block;
-        file_fcb -> first_block -> next = NULL;
+        (*file_fcb) -> first_block = (Block_Node) malloc (sizeof(_Block_Node));
+        (*file_fcb)-> first_block -> block_id = avail_block;
+        (*file_fcb)-> first_block -> next = NULL;
         file_block--;//第一个盘块已经分配，那么需分配数减一
         //修改位示图
 
@@ -108,7 +108,7 @@ void createFile(BitMap bitMap, int n, int m){
 
         //从文件的第一个文件块往后给文件新增节点
         while(file_block > 0){//插入下一个盘块节点
-            Block_Node temp_node = (file_fcb -> first_block); //第一个文件的指针
+            Block_Node temp_node = ((*file_fcb) -> first_block); //第一个文件的指针
             while(temp_node->next !=NULL){
                 temp_node = temp_node ->next;
             }
@@ -126,18 +126,14 @@ void createFile(BitMap bitMap, int n, int m){
             file_block--;
         }
 
-        printf("Create file successfully ! You file name is : %s !\n",file_fcb->name);
+        printf("Create file successfully ! You file name is : %s !\n",(*file_fcb)->name);
 
     }
-
-
 }
 
+//删除文件，根据盘块节点，修改位示图为 0 可用，并把盘块节点的内存释放掉
 
-void deleteFile(){
-
-}
-
+//释放位示图，但这里暂且不用
 void freeMap(BitMap bitMap, int m){
     for(int i = 0; i < m; i++){
         free(bitMap -> map[i]);    //释放行指针
@@ -165,21 +161,48 @@ void initMap(BitMap *bitmap, int n, int m){
     printf("Memory Initialize successfully ! It has %d blocks.\n",block_num);
 }
 
+void travelFile(FCB fcb){
+    Block_Node temp = fcb -> first_block;
+    while (temp  != NULL){
+        printf("%d   ",temp->block_id);
+        temp = temp ->next;
+    }
+    printf("\n");
+}
+void deleteFile(BitMap bitMap, int n, int m, FCB fcb){
+
+    Block_Node  temp = fcb -> first_block;
+    int re_bitmap_id = temp -> block_id;
+    updateMap(bitMap, n, m, re_bitmap_id);
+    temp = temp ->next;
+    while (temp != NULL ){
+        re_bitmap_id = temp -> block_id;
+        updateMap(bitMap, n, m, re_bitmap_id);
+        temp = temp -> next;
+    }
+
+}
+
+
 void main(){
 
     //这个只是一次性的模拟！
     BitMap m1;
+    FCB new_file;
     int n = 0 , m = 0;
     printf("Please input the size of bitmap which is rows and columns and separate with a space: \n");
     scanf("%d %d", &n, &m);
     initMap(&m1, n, m);
-    createFile(m1, n, m);
+    createFile(m1, n, m, &new_file);
+    printf("You new file block id is :  ");
+    travelFile(new_file);
+
     printf("Chose to delete your file or no ? (Y / N )\n");
     char choice;
-    scanf("%s",&choice);
+    scanf("%s", &choice);
     if (choice == 'Y'){
         //todo 删除文件的函数-deletefile()
+        //todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！
+        //        deleteFile(m1, n, m, new_file);
     }
-
-
 }

@@ -187,6 +187,19 @@ CodePt-4/fast:
 	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/build
 .PHONY : CodePt-4/fast
 
+#=============================================================================
+# Target rules for targets named CodePt-5
+
+# Build rule for target.
+CodePt-5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 CodePt-5
+.PHONY : CodePt-5
+
+# fast build rule for target.
+CodePt-5/fast:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/build
+.PHONY : CodePt-5/fast
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -322,6 +335,33 @@ src/6thcodePt4.c.s:
 	$(MAKE) -f CMakeFiles\CodePt-4.dir\build.make CMakeFiles/CodePt-4.dir/src/6thcodePt4.c.s
 .PHONY : src/6thcodePt4.c.s
 
+src/6thcodePt5.obj: src/6thcodePt5.c.obj
+
+.PHONY : src/6thcodePt5.obj
+
+# target to build an object file
+src/6thcodePt5.c.obj:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/src/6thcodePt5.c.obj
+.PHONY : src/6thcodePt5.c.obj
+
+src/6thcodePt5.i: src/6thcodePt5.c.i
+
+.PHONY : src/6thcodePt5.i
+
+# target to preprocess a source file
+src/6thcodePt5.c.i:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/src/6thcodePt5.c.i
+.PHONY : src/6thcodePt5.c.i
+
+src/6thcodePt5.s: src/6thcodePt5.c.s
+
+.PHONY : src/6thcodePt5.s
+
+# target to generate assembly for a file
+src/6thcodePt5.c.s:
+	$(MAKE) -f CMakeFiles\CodePt-5.dir\build.make CMakeFiles/CodePt-5.dir/src/6thcodePt5.c.s
+.PHONY : src/6thcodePt5.c.s
+
 src/test/testFor6th.obj: src/test/testFor6th.c.obj
 
 .PHONY : src/test/testFor6th.obj
@@ -355,13 +395,14 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... rebuild_cache
 	@echo ... 6thTest
+	@echo ... rebuild_cache
 	@echo ... OS_6thLab
 	@echo ... CodePt-1
 	@echo ... CodePt-2
 	@echo ... CodePt-3
 	@echo ... CodePt-4
+	@echo ... CodePt-5
 	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
@@ -378,6 +419,9 @@ help:
 	@echo ... src/6thcodePt4.obj
 	@echo ... src/6thcodePt4.i
 	@echo ... src/6thcodePt4.s
+	@echo ... src/6thcodePt5.obj
+	@echo ... src/6thcodePt5.i
+	@echo ... src/6thcodePt5.s
 	@echo ... src/test/testFor6th.obj
 	@echo ... src/test/testFor6th.i
 	@echo ... src/test/testFor6th.s

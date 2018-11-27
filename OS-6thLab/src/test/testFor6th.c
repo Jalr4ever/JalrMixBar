@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <malloc.h>
 
-typedef struct {
-    char name[10];
-}*TTest,_TTest;
 int main(void){
-   TTest t = (TTest) malloc(sizeof(_TTest));
-   scanf("%s",t->name);
-   printf("What you have input: %s",t->name);
+   int n = 0 , m = 0;
+   scanf("%d %d", &n, &m);
+   printf("\n1st --- and m is : %d\n",m);
+   char choice;
+   scanf("%s",&choice);
+   printf("\n2rd --- and m is : %d   and choice is %c \n", m, choice);
 }
