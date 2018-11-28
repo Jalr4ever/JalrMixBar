@@ -103,7 +103,7 @@ void createFile(BitMap bitMap, int n, int m,  FCB *file_fcb){
         file_block--;//第一个盘块已经分配，那么需分配数减一
         //修改位示图
 
-        //todo 更新位示图的函数！！！-DONE 2018.11.27 15:00
+        //Todo 更新位示图的函数！！！-DONE 2018.11.27 15:00
         updateMap(bitMap, n, m, avail_block);
 
         //从文件的第一个文件块往后给文件新增节点
@@ -119,7 +119,7 @@ void createFile(BitMap bitMap, int n, int m,  FCB *file_fcb){
             new_node -> next = NULL;
             new_node -> block_id = new_avail_block; //得到可用的字位号
 
-            //todo 更新位示图的函数！！！-DONE 2018.11.27 15:00
+            //Todo 更新位示图的函数！！！-DONE 2018.11.27 15:00
             updateMap(bitMap, n, m, new_avail_block);
 
             temp_node -> next = new_node; //新的盘块节点插入到原来的尾节点
@@ -130,8 +130,6 @@ void createFile(BitMap bitMap, int n, int m,  FCB *file_fcb){
 
     }
 }
-
-//删除文件，根据盘块节点，修改位示图为 0 可用，并把盘块节点的内存释放掉
 
 //释放位示图，但这里暂且不用
 void freeMap(BitMap bitMap, int m){
@@ -181,8 +179,14 @@ void deleteFile(BitMap bitMap, int n, int m, FCB fcb){
         temp = temp -> next;
     }
 
-    //todo
-
+    //Todo 依次释放 fcb 指针指向的内存块节点 - DONE 2018.11.28 10:33
+    Block_Node _temp = fcb ->first_block;
+    free(_temp);
+    while (_temp -> next != NULL){
+        free(_temp);
+        _temp = _temp ->next;
+    }
+    _temp = NULL;
 }
 
 
@@ -203,9 +207,10 @@ void main(){
     char choice[2];
     scanf("%s", choice);
     if (choice[0] == 'Y'){
-        //todo 删除文件的函数-deletefile() - Unfinished
-        //todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！- DONE 2018.11.27 22:05
+        //Todo 删除文件的函数-deletefile() - DONE 2018.11.28 10:33
+        //Todo 这里的 choice 使用 scanf() 后，发生了 m 为 0 的错误！- DONE 2018.11.27 22:05
 //        printf("Thing going well");
         deleteFile(m1, n, m, new_file);
+        new_file ->first_block = NULL; // deleteFile() 中的 fcb 没有用二级指针，这里就用一级指针吧！
     }
 }
